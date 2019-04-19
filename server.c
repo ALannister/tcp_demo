@@ -31,7 +31,7 @@ struct sockaddr_in{
     short int sin_family; //通信协议类型族
     unsigned short int sin_port; //端口号
     struct in_addr sin_addr; //IP地址
-    unsigned char si_zero[8];  //填充0以保持与sockaddr结构的长度相同
+    unsigned char sin_zero[8];  //填充0以保持与sockaddr结构的长度相同
 };
 3、int connect(int sockfd,const struct sockaddr *serv_addr,socklen_t addrlen)
 sockfd:
