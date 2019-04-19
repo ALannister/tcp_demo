@@ -32,8 +32,8 @@ int main(int argc,char *argv[])
         printf("Entersome thing:");
         scanf("%s",buf);
         numbytes = send(sockfd, buf, strlen(buf), 0);
-            numbytes=recv(sockfd,buf,BUFSIZ,0);
-        buf[numbytes]='\0'; 
+        numbytes = recv(sockfd,buf,BUFSIZ,0);
+        buf[numbytes] = '\0'; 
         printf("received:%s\n",buf);  
     }
     close(sockfd);
