@@ -19,7 +19,7 @@ int main(int argc,char *argv[])
     printf("We get the sockfd~\n");
     their_addr.sin_family = AF_INET;
     their_addr.sin_port = htons(8000);
-    their_addr.sin_addr.s_addr=inet_addr("162.105.155.71");
+    their_addr.sin_addr.s_addr=inet_addr("192.168.2.102");
     bzero(&(their_addr.sin_zero), 8);
     
     while(connect(sockfd,(struct sockaddr*)&their_addr,sizeof(struct sockaddr)) == -1);
